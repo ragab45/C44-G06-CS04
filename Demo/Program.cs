@@ -91,8 +91,61 @@
 
             Console.WriteLine(message);
 
-            
+
             #endregion
+            #region Video_3
+            // To make the code runnable, we first need to define the Person class
+public class Person
+        {
+            public int Id { get; set; }
+            public string? Name { get; set; }
+            public int Age { get; set; }
+
+            public string Print()
+            {
+                return $"Printed: Id={Id}, Name={Name}, Age={Age}";
+            }
         }
+
+        // The main part of the code from the image
+        public class Program
+        {
+            public static void Main(string[] args)
+            {
+                #region Example 03 [Enhanced Property Matching]
+                // Comments from the code explaining the logic:
+                /// Person is Samy and His Age is Greater Than 10
+                /// Person is Omar and His Age is between 20 and 24
+                /// Person's Age is between 50 and 60
+                /// Any One Else [Sorry But We Don't Know You]
+
+                Person person = new Person()
+                {
+                    Id = 1,
+                    Name = "Ahmed",
+                    Age = 20
+                };
+
+                string message = person switch
+                {
+                    // if person's Name is "Samy" AND Age is > 10
+                    { Name: "Samy", Age: > 10 } => person.Print(),
+
+                    // if person's Name is "Omar" AND Age is between 20 and 24
+                    { Name: "Omar", Age: >= 20 and <= 24 } => "Hello Omar",
+
+                    // if person's Age is between 50 and 60
+                    { Age: > 50 and < 60 } => "Hello Old Man",
+
+                    // Default case for any other person
+                    _ => "We Don't Know You"
+                };
+
+                Console.WriteLine(message);
+                
+            }
+        }
+        #endregion
+    }
     }
 }
