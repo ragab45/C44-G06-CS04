@@ -152,7 +152,18 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-11
+            Console.Write("Enter month number (1-12): ");
+            if (int.TryParse(Console.ReadLine(), out int month) && month >= 1 && month <= 12)
+            {
+                int days = DateTime.DaysInMonth(2024, month); // Leap year-safe
+                Console.WriteLine($"Days in Month: {days}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid month number.");
+            }
+
 
             #endregion
 
