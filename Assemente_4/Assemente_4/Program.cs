@@ -92,7 +92,20 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-8
+            Console.Write("Enter a number: ");
+            if (int.TryParse(Console.ReadLine(), out int num8))
+            {
+                for (int i = 2; i <= num8; i += 2)
+                    Console.Write(i + (i + 2 > num8 ? "\n" : " "));
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+
+
 
             #endregion
 
