@@ -242,7 +242,41 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-16
+            Console.Write("Enter 3 points (x1 y1 x2 y2 x3 y3): ");
+            string[] points = Console.ReadLine()?.Split();
+            if (points?.Length == 6 && points.All(p => double.TryParse(p, out _)))
+            {
+                double x1 = double.Parse(points[0]), y1 = double.Parse(points[1]);
+                double x2 = double.Parse(points[2]), y2 = double.Parse(points[3]);
+                double x3 = double.Parse(points[4]), y3 = double.Parse(points[5]);
+
+                bool areCollinear = (y2 - y1) * (x3 - x2) == (y3 - y2) * (x2 - x1);
+                Console.WriteLine(areCollinear ? "Points lie on a straight line." : "Points do not lie on a straight line.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+
+            // 17. Worker efficiency based on time
+            Console.Write("Enter time taken (in hours): ");
+            if (double.TryParse(Console.ReadLine(), out double hours))
+            {
+                string message = hours switch
+                {
+                    <= 3.0 => "Highly efficient",
+                    <= 4.0 => "Improve speed",
+                    <= 5.0 => "Training needed",
+                    _ => "Leave the company"
+                };
+                Console.WriteLine(message);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
 
             #endregion
         }
