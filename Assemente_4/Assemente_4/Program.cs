@@ -65,6 +65,58 @@
                 Console.WriteLine("Consonant");
 
             #endregion
+            #region  Q-6
+            Console.Write("Enter a number: ");
+            if (int.TryParse(Console.ReadLine(), out int num6))
+            {
+                for (int i = 1; i <= num6; i++)
+                    Console.Write(i + (i == num6 ? "\n" : ", "));
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+            #endregion
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
+
+            #region  Q-7
+
+            #endregion
         }
     }
 }
