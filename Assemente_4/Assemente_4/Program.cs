@@ -167,7 +167,26 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-12
+            Console.Write("Enter first number, operator (+ - * /), second number: ");
+            string[] calcInput = Console.ReadLine()?.Split();
+            if (calcInput?.Length == 3 && double.TryParse(calcInput[0], out double n1) && double.TryParse(calcInput[2], out double n2))
+            {
+                char op = calcInput[1][0];
+                double result = op switch
+                {
+                    '+' => n1 + n2,
+                    '-' => n1 - n2,
+                    '*' => n1 * n2,
+                    '/' => n2 != 0 ? n1 / n2 : double.NaN,
+                    _ => double.NaN
+                };
+                Console.WriteLine($"Result: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
 
             #endregion
 
