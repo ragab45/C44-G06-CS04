@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace Demo
 {
     internal class Program
     {
@@ -170,9 +172,33 @@ public class Person
         //    Console.WriteLine("========== After Changing Value Of Name01 ==========");
         //    Console.WriteLine($"Name01 => {name01}");
         //    Console.WriteLine($"HashCode Of Name01 => {name01.GetHashCode()}");
-            #endregion
-       
+        #endregion
 
+        
+        #region while - do while
+
+        #region do-while
+        /// Let User Enter an Even Number
+        /// if value is an odd number -> Enter value again
+        /// if it's not a number -> Enter value again
+        /// if value is an even number -> Print number
+        int number;
+        bool isParsed;
+do
+{
+    Console.WriteLine("Please Enter An Even Number : ");
+    isParsed = int.TryParse(Console.ReadLine(), out number);
+    }
+while (number % 2 == 1 || !isParsed);
+
+Console.WriteLine($"{number} Is Even Number");
+#endregion
+
+#region while
+
+#endregion
+
+        
     }
 
 
