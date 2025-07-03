@@ -109,7 +109,21 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-9
+            Console.Write("Enter base and exponent: ");
+            string[] powerInput = Console.ReadLine()?.Split();
+            if (powerInput?.Length == 2 && int.TryParse(powerInput[0], out int baseNum) && int.TryParse(powerInput[1], out int exponent))
+            {
+                Console.WriteLine(Math.Pow(baseNum, exponent));
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+
+
+
 
             #endregion
 
