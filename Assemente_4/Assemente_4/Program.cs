@@ -190,7 +190,12 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-13
+            Console.Write("Enter a string: ");
+            string str = Console.ReadLine();
+            Console.WriteLine(new string(str.Reverse().ToArray()));
+
+
 
             #endregion
 
