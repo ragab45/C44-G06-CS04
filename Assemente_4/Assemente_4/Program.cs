@@ -55,6 +55,16 @@
             }
 
             #endregion
+            #region  Q-5
+            Console.Write("Enter a character: ");
+            char ch = char.ToLower(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+            if ("aeiou".Contains(ch))
+                Console.WriteLine("Vowel");  
+            else
+                Console.WriteLine("Consonant");
+
+            #endregion
         }
     }
 }
