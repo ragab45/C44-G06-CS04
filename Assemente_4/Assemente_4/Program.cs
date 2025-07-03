@@ -213,7 +213,32 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-15
+            Console.Write("Enter start and end of range: ");
+            string[] range = Console.ReadLine()?.Split();
+            if (range?.Length == 2 && int.TryParse(range[0], out int start) && int.TryParse(range[1], out int end))
+            {
+                Console.WriteLine("The prime numbers between {0} and {1} are:", start, end);
+                for (int i = Math.Max(2, start); i <= end; i++)
+                {
+                    bool isPrime = true;
+                    for (int j = 2; j <= Math.Sqrt(i); j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                    if (isPrime)
+                        Console.Write(i + " ");
+                }
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
 
             #endregion
 
