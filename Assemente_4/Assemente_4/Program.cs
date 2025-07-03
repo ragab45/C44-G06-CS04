@@ -43,6 +43,18 @@
             }
 
             #endregion
+            #region  Q-4
+            Console.Write("Enter an integer: ");
+            if (int.TryParse(Console.ReadLine(), out int num4))
+            {
+                Console.WriteLine(num4 % 2 == 0 ? "Even" : "Odd");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+            #endregion
         }
     }
 }
