@@ -146,6 +146,35 @@ public class Person
             }
         }
         #endregion
+
+        #region  Sritng
+        // Example 02
+        //string name01 = "Amr";
+        //string name02 = "May";
+
+        //Console.WriteLine($"Name01 => {name01}");
+        //    Console.WriteLine($"HashCode Of Name01 => {name01.GetHashCode()}");
+
+        //    Console.WriteLine($"Name02 => {name02}");
+        //    Console.WriteLine($"HashCode Of Name02 => {name02.GetHashCode()}");
+
+        //    name02 = name01;
+        //    Console.WriteLine("========== After Assign ==========");
+        //    Console.WriteLine($"Name01 => {name01}");
+        //    Console.WriteLine($"HashCode Of Name01 => {name01.GetHashCode()}");
+
+        //    Console.WriteLine($"Name02 => {name02}");
+        //    Console.WriteLine($"HashCode Of Name02 => {name02.GetHashCode()}");
+
+        //    name01 = "Omar";
+        //    Console.WriteLine("========== After Changing Value Of Name01 ==========");
+        //    Console.WriteLine($"Name01 => {name01}");
+        //    Console.WriteLine($"HashCode Of Name01 => {name01.GetHashCode()}");
+            #endregion
+       
+
     }
-    }
+
+
+}
 }
