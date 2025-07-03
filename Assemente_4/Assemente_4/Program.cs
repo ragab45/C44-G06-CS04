@@ -127,7 +127,28 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-10
+            Console.Write("Enter marks of 5 subjects separated by space: ");
+            string[] marks = Console.ReadLine()?.Split();
+            if (marks?.Length == 5 && marks.All(m => int.TryParse(m, out _)))
+            {
+                int[] scores = marks.Select(int.Parse).ToArray();
+                int total = scores.Sum();
+                double average = scores.Average();
+                double percentage = (double)total / 5;
+
+                Console.WriteLine($"Total marks = {total}");
+                Console.WriteLine($"Average Marks = {average}");
+                Console.WriteLine($"Percentage = {percentage}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+
+
+
 
             #endregion
 
