@@ -79,6 +79,16 @@
 
             #endregion
             #region  Q-7
+            Console.Write("Enter a number: ");
+            if (int.TryParse(Console.ReadLine(), out int num7))
+            {
+                for (int i = 1; i <= 12; i++)
+                    Console.Write((num7 * i) + (i == 12 ? "\n" : " "));
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
 
             #endregion
 
