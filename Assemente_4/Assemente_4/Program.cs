@@ -199,7 +199,17 @@
 
             #endregion
 
-            #region  Q-7
+            #region  Q-14
+            Console.Write("Enter an integer: ");
+            if (int.TryParse(Console.ReadLine(), out int num14))
+            {
+                int reversed = int.Parse(new string(num14.ToString().Reverse().ToArray()));
+                Console.WriteLine(reversed);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
 
             #endregion
 
